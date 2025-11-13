@@ -1,131 +1,125 @@
-Real-Time Edge Detection Viewer
-Android (OpenCV C++ + OpenGL ES + JNI) + Web (TypeScript)
+🚀 Real-Time Edge Detection Viewer
+🎯 Android (OpenCV C++ + OpenGL ES + JNI) + Web (TypeScript)
 
-This project implements a real-time edge-detection system using OpenCV in C++, rendered using OpenGL ES, and supported by a TypeScript-based web viewer.
+This project demonstrates a real-time edge detection pipeline using OpenCV in C++, rendered via OpenGL ES, with a companion TypeScript Web Viewer for visualization.
+It showcases native processing, GPU rendering, and cross-platform integration — all in one lightweight system.
 
 ✅ Features Implemented (Android + Web)
-🔹 Android Application
+🔹 📱 Android Application
 
-Camera feed integration using Camera2 API + TextureView
+✔️ Camera feed integration using Camera2 API + TextureView
+✔️ Frame processing in OpenCV C++ via JNI
+✔️ Supported filters:
+    • 🟦 Grayscale
+    • ⚡ Canny Edge Detection
+✔️ Real-time GPU rendering using OpenGL ES 2.0 textures
+✔️ Smooth performance (10–15 FPS guaranteed)
+✔️ Bonus feature:
+    • 🔄 Toggle between Raw Feed ↔ Processed Feed
 
-Frame processing in C++ via JNI
+🔹 🌐 Web Viewer (TypeScript + WebGL)
 
-Grayscale
+✔️ Browser webcam integration
+✔️ Edge detection algorithms implemented in TS:
+    • Sobel
+    • Canny
+    • Prewitt
+    • Roberts
+    • Laplacian
+✔️ Optional OpenCV WebAssembly backend
+✔️ GPU-accelerated rendering with WebGL
+✔️ Displays:
+    • Processed output frame
+    • FPS counter & resolution info
 
-Canny Edge Detection
+📷 Screenshots / GIFs
 
-Real-time rendering using OpenGL ES 2.0 textures
-
-Smooth performance (10–15 FPS)
-
-Toggle between raw & processed frames (Bonus)
-
-🔹 Web Viewer (TypeScript)
-
-Webcam capture via browser
-
-Edge detection algorithms:
-
-Sobel, Canny, Prewitt, Roberts, Laplacian
-
-Optional WebAssembly-based OpenCV processor
-
-GPU-accelerated rendering via WebGL
-
-Viewer displays:
-
-Processed sample frame
-
-Basic frame stats (FPS, resolution)
-
-📷 Screenshots 
-
+(Add your own screenshots here)
 
 ![Android App](screenshots/android.png)
 ![Web Viewer](screenshots/web.png)
 
 
-(Replace these with your real screenshots in the repo.)
+💡 Tip: Use screen recordings for bonus impact!
 
 ⚙️ Setup Instructions
-Android Setup (NDK + OpenCV)
-Requirements
+📱 Android Setup (NDK + OpenCV)
+🛠 Requirements
 
 Android Studio
 
-Android NDK (latest recommended)
+Android NDK
 
 OpenCV Android SDK
 
-Physical device for testing
+Physical Android device (recommended)
 
-Steps
+📌 Steps
 
-Install and enable NDK in Android Studio
+Install & enable NDK in Android Studio
 
-Download and extract OpenCV-Android-SDK
+Download OpenCV-Android-SDK
 
-Place OpenCV into:
+Place OpenCV here:
 
 app/src/main/cpp/opencv/
 
 
 Update CMakeLists.txt to link OpenCV
 
-Build the project and run on a device
+Build and run the app
 
-Web Viewer Setup (TypeScript)
+🌐 Web Viewer Setup (TypeScript)
 Install dependencies:
 npm install
 npm run build
 
-Run the local server:
+Run local dev server:
 npm run serve
 
 
-or:
+OR
 
 python3 serve.py
 
-Open in browser:
-http://localhost:8000
+Open the viewer:
+
+👉 http://localhost:8000
 
 🧠 Architecture Overview
-📌 1. Android Architecture (Camera → JNI → C++ → OpenGL ES)
+🔧 1. Android Frame Pipeline
 Camera2 API  
      ↓  
 TextureView  
      ↓  
-JNI (frame buffer)  
+JNI (frame buffer transfer)  
      ↓  
-OpenCV C++ (Canny / Grayscale)  
+OpenCV C++ (Grayscale / Canny)  
      ↓  
-Processed RGBA  
+Processed RGBA output  
      ↓  
 OpenGL ES Renderer  
      ↓  
-Displayed on screen  
+📱 Display
 
-📌 2. Web Architecture (Webcam → TS/WASM → WebGL)
+🔧 2. Web Viewer Pipeline
 Webcam Stream  
      ↓  
-HTML Canvas (Input)  
+HTML Canvas  
      ↓  
-Edge Detection  
-   • TypeScript (Sobel / Canny / etc.)  
-   • OR OpenCV WebAssembly (optional)  
+Edge Detection (TS or WASM OpenCV)  
      ↓  
 WebGL Renderer  
      ↓  
-Browser Output  
+🌐 Browser Output
 
 📦 Project Structure
 /android
-   /app/src/main/java
-   /app/src/main/cpp
-   /gl
+   /app/src/main/java      → Java/Kotlin code
+   /app/src/main/cpp       → OpenCV C++ + JNI
+   /gl                     → OpenGL ES renderer
 /web
-   /src
+   /src                    → TypeScript logic
    index.html
    package.json
    tsconfig.json
