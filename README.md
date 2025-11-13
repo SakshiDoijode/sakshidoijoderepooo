@@ -15,7 +15,7 @@ It showcases native processing, GPU rendering, and cross-platform integration �
 ✔️ Real-time GPU rendering using OpenGL ES 2.0 textures
 ✔️ Smooth performance (10–15 FPS guaranteed)
 ✔️ Bonus feature:
-    • 🔄 Toggle between Raw Feed ↔ Processed Feed
+  • 🔄 Toggle between Raw Feed ↔ Processed Feed
 
 🔹 🌐 Web Viewer (TypeScript + WebGL)
 
