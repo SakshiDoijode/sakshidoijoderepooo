@@ -1,4 +1,4 @@
-# Python requirements for FlamApp
+
 # This project uses only Python standard library modules
 # Python 3.6+ is required
 
