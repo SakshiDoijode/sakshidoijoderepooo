@@ -202,30 +202,9 @@ screenshots/web.png
 
 ---
 
-## 9. License
-
-This project is licensed under the MIT License.
-(Add full details if required.)
-
----
-
-## 10. Acknowledgements
-
-* OpenCV contributors
-* Khronos Group (OpenGL ES 2.0)
-* TypeScript & WebGL ecosystem
-
----
 
 
 
----
 
-If you want, I can also provide:
 
-✅ A **professional GitHub badge header**  
-✅ A **repository folder auto-setup script (.sh)**  
-✅ A **documentation folder (docs/)**  
-✅ A **logo or cover image for your README**
 
-Just tell me — I can generate it instantly.
