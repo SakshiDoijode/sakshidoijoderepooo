@@ -1,175 +1,132 @@
-🧪 Real-Time Edge Detection Viewer
+Real-Time Edge Detection Viewer
 Android (OpenCV C++ + OpenGL ES + JNI) + Web (TypeScript)
 
-Assessment – RnD Intern
+This project implements a real-time edge-detection system using OpenCV in C++, rendered using OpenGL ES, and supported by a TypeScript-based web viewer.
 
-📌 Overview
+✅ Features Implemented (Android + Web)
+🔹 Android Application
 
-This project is a Real-Time Edge Detection System built as part of a 3-day assessment to evaluate practical skills in:
+Camera feed integration using Camera2 API + TextureView
 
-Android Development
-
-OpenCV (C++)
-
-JNI (NDK)
-
-OpenGL ES Rendering
-
-TypeScript (Web Viewer)
-
-The application processes camera frames in real-time, applies OpenCV-based edge detection, and renders the output through OpenGL ES.
-A lightweight web viewer is also included to display processed frames and demonstrate cross-platform pipeline understanding.
-
-✔️ Features Implemented (Android + Web)
-Android (NDK + OpenCV C++ + OpenGL ES)
-
-📸 Camera Feed Integration using TextureView + Camera2 API
-
-🔁 JNI Bridge for sending raw frames to C++
-
-🧠 OpenCV C++ Processing
+Frame processing in C++ via JNI
 
 Grayscale
 
 Canny Edge Detection
 
-🎨 OpenGL ES 2.0 Renderer
+Real-time rendering using OpenGL ES 2.0 textures
 
-Displays processed frames as textures
+Smooth performance (10–15 FPS)
 
-Smooth rendering (10–15 FPS achievable)
+Toggle between raw & processed frames (Bonus)
 
-🔘 Mode Toggle (Bonus)
+🔹 Web Viewer (TypeScript)
 
-Raw feed
+Webcam capture via browser
 
-Processed (Canny / Grayscale)
+Edge detection algorithms:
 
-Web (TypeScript + OpenCV WebAssembly + WebGL)
+Sobel, Canny, Prewitt, Roberts, Laplacian
 
-🌐 Real-time webcam processing (TypeScript)
+Optional WebAssembly-based OpenCV processor
 
-🔄 Algorithms supported:
+GPU-accelerated rendering via WebGL
 
-Sobel
+Viewer displays:
 
-Canny
+Processed sample frame
 
-Roberts
+Basic frame stats (FPS, resolution)
 
-Prewitt
-
-Laplacian
-
-🧱 OpenCV WebAssembly Integration
-
-🎨 WebGL Renderer for GPU-accelerated output
-
-🖥 Minimal viewer with:
-
-Static processed frame preview
-
-FPS counter
-
-Resolution info
-📁 Project Structure
-/
-├── android/
-│   ├── app/src/main/java/  (Camera + JNI bridge)
-│   ├── app/src/main/cpp/   (OpenCV C++ processing)
-│   ├── gl/                 (OpenGL renderer)
-│   └── CMakeLists.txt
-│
-├── web/
-│   ├── src/
-│   │   ├── app.ts
-│   │   ├── edge-detection.ts
-│   │   ├── opencv-processor.ts
-│   │   ├── webgl-renderer.ts
-│   │   └── types.ts
-│   ├── index.html
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── serve.py
-│
-└── README.md
+📷 Screenshots 
 
 
-📸 Screenshots / Demo
+![Android App](screenshots/android.png)
+![Web Viewer](screenshots/web.png)
 
 
-
-
-
-
-
-
+(Replace these with your real screenshots in the repo.)
 
 ⚙️ Setup Instructions
-🟦 Web Setup (TypeScript)
-Install dependencies
-npm install
-npm run build
-
-Run the web viewer
-npm run serve
-
-
-OR:
-
-python3 serve.py
-
-
-Open your browser at:
-
-http://localhost:8000
-
-🤖 Android Setup (NDK + OpenCV)
+Android Setup (NDK + OpenCV)
 Requirements
 
 Android Studio
 
-Android NDK (r23+ recommended)
+Android NDK (latest recommended)
 
 OpenCV Android SDK
 
-OpenGL ES 2.0 compatible device
+Physical device for testing
 
 Steps
 
+Install and enable NDK in Android Studio
+
 Download and extract OpenCV-Android-SDK
 
-Copy the sdk/native folder into app/src/main/cpp/opencv/
+Place OpenCV into:
 
-Update CMakeLists.txt to include OpenCV
+app/src/main/cpp/opencv/
 
-Enable NDK support in build.gradle
 
-Build & Run on a physical Android device
+Update CMakeLists.txt to link OpenCV
+
+Build the project and run on a device
+
+Web Viewer Setup (TypeScript)
+Install dependencies:
+npm install
+npm run build
+
+Run the local server:
+npm run serve
+
+
+or:
+
+python3 serve.py
+
+Open in browser:
+http://localhost:8000
 
 🧠 Architecture Overview
-📌 Frame Flow (Android)
+📌 1. Android Architecture (Camera → JNI → C++ → OpenGL ES)
 Camera2 API  
-    ↓  
-TextureView → YUV frame  
-    ↓ JNI  
-C++ (OpenCV: Canny/Grayscale)  
-    ↓  
-Processed RGBA Buffer  
-    ↓  
+     ↓  
+TextureView  
+     ↓  
+JNI (frame buffer)  
+     ↓  
+OpenCV C++ (Canny / Grayscale)  
+     ↓  
+Processed RGBA  
+     ↓  
 OpenGL ES Renderer  
-    ↓  
-Screen Output (Texture)
+     ↓  
+Displayed on screen  
 
-📌 Frame Flow (Web)
+📌 2. Web Architecture (Webcam → TS/WASM → WebGL)
 Webcam Stream  
-    ↓  
-HTML5 Canvas Input  
-    ↓  
-• TypeScript Algorithms (Sobel, Canny, etc.)  
-           OR  
-• OpenCV WebAssembly (WASM)  
-    ↓  
+     ↓  
+HTML Canvas (Input)  
+     ↓  
+Edge Detection  
+   • TypeScript (Sobel / Canny / etc.)  
+   • OR OpenCV WebAssembly (optional)  
+     ↓  
 WebGL Renderer  
-    ↓  
-Browser View
+     ↓  
+Browser Output  
+
+📦 Project Structure
+/android
+   /app/src/main/java
+   /app/src/main/cpp
+   /gl
+/web
+   /src
+   index.html
+   package.json
+   tsconfig.json
+README.md
