@@ -74,6 +74,8 @@ FPS counter
 Resolution info
 
 📁 Project Structure
+
+
 /
 ├── android/
 │   ├── app/src/main/java/  (Camera + JNI bridge)
