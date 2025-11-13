@@ -1,5 +1,7 @@
 🔍 Real-Time Edge Detection Viewer
+
 Android (OpenCV C++ + OpenGL ES + JNI) + Web (TypeScript)
+
 
 This project implements a real-time edge detection pipeline using OpenCV in C++, rendered using OpenGL ES, with a companion TypeScript Web Viewer for visualization. The system demonstrates native processing, GPU rendering, and cross-platform integration between Android and Web.
 
@@ -61,9 +63,7 @@ Real-time GPU rendering using OpenGL ES 2.0 textures
 
 Smooth performance (10–15 FPS)
 
-Bonus:
-
-Toggle between Raw Feed ↔ Processed Feed
+Bonus: Toggle between Raw Feed ↔ Processed Feed
 
 Web Viewer (TypeScript + WebGL)
 
@@ -87,10 +87,8 @@ Resolution information
 
 Screenshots / GIFs
 
-(Add your own screenshots here.)
 
-screenshots/android.png  
-screenshots/web.png
+
 
 Setup Instructions
 Android Setup (NDK + OpenCV)
@@ -127,7 +125,6 @@ npm run build
 Start development server:
 npm run serve
 
-
 Or:
 
 python3 serve.py
@@ -135,6 +132,7 @@ python3 serve.py
 
 Open in browser:
 http://localhost:8000
+
 
 Architecture Overview
 Android Data Flow (Camera → JNI → OpenCV C++ → OpenGL ES)
