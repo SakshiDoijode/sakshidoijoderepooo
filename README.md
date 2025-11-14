@@ -159,11 +159,12 @@ http://localhost:8000
 
 ## 7. Screenshots
 
-(Add your own images)
+<img width="1843" height="996" alt="Screenshot 2025-11-14 135327" src="https://github.com/user-attachments/assets/d9af391b-f5cb-4f0a-b59d-57760fd55bfc" />
 
+<img width="1814" height="784" alt="Screenshot 2025-11-14 135450" src="https://github.com/user-attachments/assets/49484c08-938f-4435-99fc-b9d963c1a35f" />
 
-screenshots/android.png
-screenshots/web.png
+<img width="1854" height="995" alt="image" src="https://github.com/user-attachments/assets/83041282-02fe-4891-8e67-1a06663ac835" />
+
 
 
 ---
