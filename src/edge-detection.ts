@@ -3,6 +3,7 @@
  * Implements various edge detection methods with proper TypeScript types
  */
 
+
 import { GradientData } from './types.js';
 
 export class EdgeDetector {
