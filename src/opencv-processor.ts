@@ -4,6 +4,7 @@
  */
 
 
+
 export class OpenCVProcessor {
     private cv: any;
     private isReady: boolean = false;
