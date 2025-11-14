@@ -52,6 +52,12 @@ The Real-Time Edge Detection Viewer provides:
 
 <img width="1814" height="784" alt="Screenshot 2025-11-14 135450" src="https://github.com/user-attachments/assets/49484c08-938f-4435-99fc-b9d963c1a35f" />
 
+<img width="1108" height="593" alt="Screenshot 2025-11-14 142339" src="https://github.com/user-attachments/assets/a61090d7-93c5-4f8d-9c18-cbf53287533c" />
+
+<img width="1080" height="528" alt="Screenshot 2025-11-14 142417" src="https://github.com/user-attachments/assets/823708c7-7817-45d0-8405-c760b8baa390" />
+
+<img width="1068" height="918" alt="Screenshot 2025-11-14 142429" src="https://github.com/user-attachments/assets/db7afe39-9918-4532-9ba5-aa06e06b46a4" />
+
 <img width="1854" height="995" alt="image" src="https://github.com/user-attachments/assets/83041282-02fe-4891-8e67-1a06663ac835" />
 
 
