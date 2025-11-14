@@ -2,6 +2,7 @@
  * OpenCV.js Processor
  * Uses OpenCV C++ compiled to WebAssembly for native performance
  */
+
 export declare class OpenCVProcessor {
     private cv;
     private isReady;
