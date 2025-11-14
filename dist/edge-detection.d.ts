@@ -2,6 +2,7 @@
  * Edge Detection Algorithms
  * Implements various edge detection methods with proper TypeScript types
  */
+
 export declare class EdgeDetector {
     /**
      * Apply Gaussian blur to reduce noise
