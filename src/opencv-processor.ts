@@ -3,6 +3,7 @@
  * Uses OpenCV C++ compiled to WebAssembly for native performance
  */
 
+
 export class OpenCVProcessor {
     private cv: any;
     private isReady: boolean = false;
